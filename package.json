@@ -1,0 +1,15 @@
+{
+  "name": "fizzbuzz-bot",
+  "version": "1.0.0",
+  "description": "A dumb discord bot that plays fizzbuzz",
+  "main": "fizzbuzz.js",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maddymakesgames",
+  "license": "ISC"
+}
