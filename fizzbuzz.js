@@ -1,7 +1,8 @@
 const client = new (require('discord.js')).Client();
 
 client.on('message', (message) => {
-	if(message.content.startsWith('!fb') && !message.author.bot) {
+	if(message.author.bot) return;
+	if(message.content.startsWith('!fb')) {
 		let numStr = message.content.slice('!fb'.length).trim();
 		let args = numStr.split(' ');
 		let players = 0;
@@ -36,6 +37,9 @@ client.on('message', (message) => {
 			}
 		}
 		safeSend(output, message.channel);
+	}
+	else if(message.content.startsWith('!help')) {
+		message.channel.send('!fb [players] [start] end\nPrints fizz buzz until a specified end, can be given a start value and a players value.');
 	}
 });
 
