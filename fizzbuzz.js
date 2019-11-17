@@ -8,6 +8,7 @@ client.on('message', (message) => {
 		let players = 0;
 		let start = 0;
 		let end = 10;
+		for(num in args) if(num == parseInt(num)) return message.channel.send('Please provide only integers for the arguments');
 		switch(args.length) {
 			case 1:
 				end = args[0];
